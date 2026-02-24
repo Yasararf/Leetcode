@@ -16,7 +16,7 @@ public class Solution {
                 right--;
             }
             
-            // swap vowels
+            
             char temp = chars[left];
             chars[left] = chars[right];
             chars[right] = temp;

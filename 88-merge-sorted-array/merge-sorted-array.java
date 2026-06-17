@@ -16,7 +16,7 @@ class Solution {
             nums1[k--] = nums2[j--];
         }
 
-        System.out.print(Arrays.toString(nums1));
+        //System.out.print(Arrays.toString(nums1));
         
         
     }

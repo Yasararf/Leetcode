@@ -9,7 +9,5 @@ class Solution {
             }
         }
         return sum;
-
-
     }
 }

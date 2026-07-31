@@ -1,21 +1,24 @@
 class Solution {
-    public int hash(int n){
-            int sum = 0;
-            while(n != 0){
-                int rem = n%10;
-                sum += rem*rem;
-                n /= 10;
-            }
-            return sum;
+    public int sqr(int n){
+        int ans = 0;
+        while(n != 0){
+            int temp = n%10;
+            ans += temp*temp;
+            n /= 10;
+        }
+        return ans;
     }
     public boolean isHappy(int n) {
-        HashSet<Integer> seen = new HashSet<>();
-        int temp = n;
-        
-        while(temp>1 && !seen.contains(temp)){
-            seen.add(temp);
-            temp = hash(temp);
+        List<Integer> seen = new ArrayList<>();
+        while(!seen.contains(n)){
+            int ans = sqr(n);
+            seen.add(n);
+            if(ans == 1){
+                return true;
+            }
+            n = ans;
+            ans = 0;
         }
-        return temp == 1;
+        return false;
     }
 }
